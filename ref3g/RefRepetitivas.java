@@ -56,9 +56,74 @@ public class RefRepetitivas {
         }
     }
 
+    public static void numerosPrimos() {
+        System.out.println("Ingrese el limite maximo:");
+        int num=leerT.nextInt();       
+        int numX=1;//6
+        while(numX<=num){
+            int cantDiv=0;
+            int cont=1;
+            while (cont<=numX) {
+                if (cantDiv>2) break;
+                if (numX%cont==0) {
+                    cantDiv++;//3
+                }
+                cont++;//4
+            }        
+            if (cantDiv==2) {
+                System.out.println(numX);
+            }
+            numX=numX+1;
+        }        
+    }
+
+    public static void pintarPiramide() {
+        System.out.println("Ingese Altura de la Letra:"); 
+        int cantF=leerT.nextInt();
+        System.out.println("Ingrese el Caracter:");
+        char caracter=leerT.next().charAt(0);
+        int medio=cantF+1;
+         for (int f = 1; f <= cantF; f++) {
+             for (int c = 1; c <= 2*cantF+1; c++) {
+                 if (f==1 && medio==c) {
+                     System.out.print(caracter);
+                 }else if(c>=medio-f && f>1 && c<=medio+f ){
+                     System.out.print(caracter);
+                 }else if(f==cantF){
+                     System.out.print(caracter);
+                 }else{
+                     System.out.print(" ");
+                 }
+             }
+             System.out.print("\n");
+         }
+         System.out.println("");
+    } 
+
+    public static void pintarU() {
+        System.out.println("Ingese Altura de la Letra:"); 
+        int cantF=leerT.nextInt();
+        System.out.println("Ingrese el Caracter:");
+        char caracter=leerT.next().charAt(0);
+        
+         for (int f = 1; f <= cantF; f++) {
+             for (int c = 1; c <= cantF; c++) {
+                 if ((c==1 || c==cantF)  && f<cantF) {
+                     System.out.print(caracter);
+                 }else if(f==cantF && c>1 && c<=cantF-1 ){
+                     System.out.print(caracter);
+                 }else{
+                     System.out.print(" ");
+                 }
+             }
+             System.out.print("\n");
+         }
+         System.out.println("");
+    }    
+
     public static void main(String[] args) {
         //serieFibonaci();
         //fibonaciN();
-        siNumeroPrimo();
+        pintarU();
     }    
 }

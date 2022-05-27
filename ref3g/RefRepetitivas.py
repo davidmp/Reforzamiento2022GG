@@ -43,6 +43,22 @@ def siNumeroPrimo():
     else:
         print(f"El numero {num} no es primo")
 
+def numerosPrimos():
+    num=int(input("Ingrese el limite maximo:"))
+    numX=1
+    while(numX<=num):
+        cont=1
+        cantDiv=0
+        while(cont<=numX):
+            if cantDiv>2:
+                break
+            if(numX%cont==0):
+                cantDiv=cantDiv+1
+            cont=cont+1
+        if(cantDiv==2):
+            print(f"{numX}")    
+        numX=numX+1
 
-siNumeroPrimo()
+
+numerosPrimos()
 
