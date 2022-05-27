@@ -13,7 +13,7 @@ public class RefRepetitivas {
         System.out.println(nI);
         while (nS<n) {  
             System.out.println(nS);              
-            nT=nS+nI;                        
+            nT=nI+nS;                        
             nI=nS;
             nS=nT;            
         }        
