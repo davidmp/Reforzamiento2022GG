@@ -37,8 +37,28 @@ public class RefRepetitivas {
         System.out.println("el fibonaci de "+n+" es:"+nS);
     }
 
+
+    public static void siNumeroPrimo() {
+        System.out.println("Ingrese un numero:");
+        int num=leerT.nextInt();
+        int cont=1;
+        int cantDiv=0;
+        while (cont<=num) {
+            if (num%cont==0) {
+                cantDiv++;
+            }
+            cont++; 
+        }        
+        if (cantDiv==2) {
+            System.out.println("El numero "+num+" es primo");
+        } else {
+            System.out.println("El numero "+num+" no es primo");
+        }
+    }
+
     public static void main(String[] args) {
         //serieFibonaci();
-        fibonaciN();
+        //fibonaciN();
+        siNumeroPrimo();
     }    
 }

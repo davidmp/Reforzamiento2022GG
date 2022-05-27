@@ -28,6 +28,21 @@ def fibonaciN():
     print(f"el fibonaci de {n} es {nS}")
 
 #serieFibonaci()
-fibonaciN()
+#fibonaciN()
 
+def siNumeroPrimo():
+    num=int(input("Ingrese un numero:"))
+    cont=1
+    cantDiv=0
+    while(cont<=num):
+        if(num%cont==0):
+            cantDiv=cantDiv+1
+        cont=cont+1
+    if(cantDiv==2):
+        print(f"El numero {num} es primo")
+    else:
+        print(f"El numero {num} no es primo")
+
+
+siNumeroPrimo()
 
