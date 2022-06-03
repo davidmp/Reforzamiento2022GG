@@ -29,8 +29,7 @@ public class Persona {
 
     public void modificarOcupacion(String ocupacion) {
         this.ocupacion=ocupacion;
-    }
-        
+    }        
 }
 
 class Principal{
