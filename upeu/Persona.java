@@ -46,12 +46,14 @@ public class Persona {
 
 class Principal{
     public static void main(String[] args) {
-        Persona myObj=new Persona();
-        myObj.nombre="David";
-        System.out.println(myObj.nombre);
+        Persona myObj=new Persona("Dario",'M', "Ing. Civil");
+        System.out.println(myObj.obtenerNombre());
+        System.out.println(myObj.obtenerGenero());
+        System.out.println(myObj.obtenerOcupacion());
+        /* .out.println(myObj.nombre);
         myObj.modificarNombre("Raul");
         System.out.println(myObj.nombre);
-        System.out.println(myObj.obtenerNombre());
+        System.out.println(myObj.obtenerNombre());*/
     }
 }
 
