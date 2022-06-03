@@ -1,5 +1,4 @@
 package upeu;
-
 /**
  * Persona
  */
@@ -31,5 +30,17 @@ public class Persona {
     public void modificarOcupacion(String ocupacion) {
         this.ocupacion=ocupacion;
     }
-    
+        
 }
+
+class Principal{
+    public static void main(String[] args) {
+        Persona myObj=new Persona();
+        myObj.nombre="David";
+        System.out.println(myObj.nombre);
+        myObj.modificarNombre("Raul");
+        System.out.println(myObj.nombre);
+        System.out.println(myObj.obtenerNombre());
+    }
+}
+
