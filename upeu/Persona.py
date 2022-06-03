@@ -28,10 +28,11 @@ class Persona:
     def modificarOcupacion(self,ocupacion):
         self.ocupacion=ocupacion
 
-
-myObj = Persona()
-myObj.nombre="David"
-print(myObj.nombre)
-myObj.modificarNombre("Raul")
-print(myObj.nombre)
+myObj = Persona("Pedro", "M", "Ing. civil")
 print(myObj.obtenerNombre())
+print(myObj.obtenerGenero())
+print(myObj.obtenerOcupacion())
+
+#myObj.modificarNombre("Raul")
+#print(myObj.nombre)
+#print(myObj.obtenerNombre())
