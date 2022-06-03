@@ -7,6 +7,18 @@ public class Persona {
     char genero;
     String ocupacion;
 
+    Persona(){        
+    }
+
+    Persona(String nombre){
+        this.nombre=nombre;
+    }
+    Persona(String nombre, char genero, String ocupacion){
+        this.nombre=nombre;
+        this.genero=genero;
+        this.ocupacion=ocupacion;
+    }
+
     public String obtenerNombre() {
         return nombre;
     }
