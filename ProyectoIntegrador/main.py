@@ -5,7 +5,10 @@ from pe.edu.upeu.dao.PersonaDao import PersonaDao
 def main():
     daoP=PersonaDao()
     daoP.crearPersona()
-    daoP.listarPersona()    
+    daoP.listarPersona()   
+    print("Editar Registro")
+    daoP.editarPersona() 
+    daoP.listarPersona()   
 
 if __name__ == '__main__':
     #print_hi('PyCharm')

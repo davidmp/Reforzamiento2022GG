@@ -29,12 +29,14 @@ class PersonaDao:
         data=aq.leerContenidoArchivo()
         for d in data:
             print(d)
-            
+
     def editarPersona(self):
         aq = LeerArchivo(nombrea)
-        modeloP=PersonaTO("","","")
+        modeloP=PersonaTO("","","","","")
         dnix=str(input("Ingrese DNI:"))
         modeloP.apellidos=input("Ingrese nuevo apellido:")
+        modeloP.celular=input("Ingres su nuevo Celular:")
+
         data = aq.leerContenidoArchivo()
         matriz = []
         for d in data:
@@ -43,29 +45,24 @@ class PersonaDao:
         print(matriz)
         for f in range(len(matriz)):
             ix=0
-            if(matriz[f][2]==dnix):
-                print("entro aqui")
-                verx=modeloP.__dict__.items()
-                print(verx)
+            if(matriz[f][0]==dnix):
                 for campo, valor in modeloP.__dict__.items():
-                    print(f"i:{ix} {valor}")
                     if valor!="":
                         matriz[f][ix] = valor
                     ix+=1
+        print("Cambiado")
 
+
+        print(matriz)
+        aq = LeerArchivo(nombrea)
+        aq.crearArchivo()
         for x in range(len(matriz)):
             contenido = ""
             for y in range(len(matriz[0])):
-                if y == len(matriz[0])-1:
-                    contenido = "".join((contenido, str(matriz[x][y])+"\n"))
-                else:
-                    contenido = "".join((contenido, str(matriz[x][y]) + "\t"))
-            if x==0:
-                aq = LeerArchivo(nombrea)
-                aq.escribirArchivo(contenido)
-            else:
-                aq = LeerArchivo(nombrea)
-                aq.agregarContenidoArchivo(contenido)
+                contenido = "".join((contenido, str(matriz[x][y]) + "\t"))
+            aq = LeerArchivo(nombrea)
+            aq.agregarContenidoArchivo(contenido)
+                
 
 
 
