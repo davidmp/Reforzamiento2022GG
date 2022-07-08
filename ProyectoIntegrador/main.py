@@ -1,6 +1,11 @@
 
+from pe.edu.upeu.dao.PersonaDao import PersonaDao
+
+
 def main():
-    pass
+    daoP=PersonaDao()
+    daoP.crearPersona()
+    daoP.listarPersona()    
 
 if __name__ == '__main__':
     #print_hi('PyCharm')

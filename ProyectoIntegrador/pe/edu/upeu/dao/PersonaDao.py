@@ -8,19 +8,20 @@ class PersonaDao:
     nombrea="Persona.txt"
 
     def crearPersona(self):
-        pTo=PersonaTO("","","")
+        pTo=PersonaTO("","","","","")
+        pTo.dni=str(input("Ingrese su DNI:"))
         pTo.nombre=input("Ingrese su nombre:")
         pTo.apellidos = input("Ingrese su apellido:")
-        pTo.dni = input("Ingrese su dni:")
+        pTo.celular = input("Ingrese su Celular:")
+        pTo.correo = input("Ingrese su correo:")
 
         aq=LeerArchivo(nombrea)
         contenido=""
         for campo, valor in pTo.__dict__.items():
-            if campo=="dni":
+            if campo=="correo":
                 contenido = "".join((contenido, valor))
             else:
-                contenido = "".join((contenido, valor + "\t"))
-        print(contenido)
+                contenido = "".join((contenido, valor + "\t"))        
         aq.agregarContenidoArchivo(contenido)
 
     def listarPersona(self):
@@ -28,6 +29,7 @@ class PersonaDao:
         data=aq.leerContenidoArchivo()
         for d in data:
             print(d)
+            
     def editarPersona(self):
         aq = LeerArchivo(nombrea)
         modeloP=PersonaTO("","","")
