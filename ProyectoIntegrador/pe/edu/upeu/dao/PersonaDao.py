@@ -5,7 +5,7 @@ from pe.edu.upeu.util.LeerArchivo import LeerArchivo
 
 class PersonaDao:
     global nombrea
-    nombrea="Persona.txt"
+    nombrea=str("Persona.txt")
 
     def crearPersona(self):
         pTo=PersonaTO("","","","","")
@@ -64,9 +64,21 @@ class PersonaDao:
             aq.agregarContenidoArchivo(contenido)
                 
 
-
-
     def eliminarPersona(self):
         aq = LeerArchivo(nombrea)
-
-        pass
+        dnix=str(input("Ingrese DNI:"))     
+        data = aq.leerContenidoArchivo()
+        matriz = []
+        for d in data:
+            separado = d.split("\t")
+            matriz.append(separado)
+        print(matriz)
+        aq = LeerArchivo(nombrea)
+        aq.crearArchivo()
+        for x in range(len(matriz)):
+            contenido = ""
+            if matriz[x][0]!=dnix:
+                for y in range(len(matriz[0])):
+                    contenido = "".join((contenido, str(matriz[x][y]) + "\t"))
+                aq = LeerArchivo(nombrea)
+                aq.agregarContenidoArchivo(contenido)

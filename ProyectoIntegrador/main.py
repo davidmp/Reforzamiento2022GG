@@ -6,8 +6,9 @@ def main():
     daoP=PersonaDao()
     daoP.crearPersona()
     daoP.listarPersona()   
-    print("Editar Registro")
-    daoP.editarPersona() 
+    #print("Editar Registro")
+    #daoP.editarPersona() 
+    daoP.eliminarPersona()
     daoP.listarPersona()   
 
 if __name__ == '__main__':
