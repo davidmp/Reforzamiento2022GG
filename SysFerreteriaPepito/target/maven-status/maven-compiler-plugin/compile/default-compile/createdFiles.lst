@@ -1,0 +1,8 @@
+pe\edu\upeu\modelo\CategoriaTO.class
+pe\edu\upeu\crud\AppCrud.class
+pe\edu\upeu\util\LeerTeclado.class
+pe\edu\upeu\util\UtilsX.class
+pe\edu\upeu\dao\CategoriaDao.class
+pe\edu\upeu\ferreteria\App.class
+pe\edu\upeu\util\LeerArchivo.class
+pe\edu\upeu\ferreteria\MenuOpciones.class

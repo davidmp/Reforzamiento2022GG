@@ -1,0 +1,3 @@
+C1	Lampa
+C3	Martillo
+C4	Paleta
